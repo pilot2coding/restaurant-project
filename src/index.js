@@ -1,6 +1,7 @@
 import "./styles.css";
 import { renderMenu } from "./menu";
 import { contactRender } from "./contact";
+import { renderHome } from "./about";
 
 const menuButton = document.querySelector("#menu")
 menuButton.addEventListener("click", function(){
@@ -10,5 +11,15 @@ menuButton.addEventListener("click", function(){
 const contactButton = document.querySelector("#contact");
 contactButton.addEventListener("click", function(){
     contactRender();
+});
+
+const homeButton = document.querySelector("#home");
+
+homeButton.addEventListener("click", function(){
+    renderHome();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderHome();
 });
 
